@@ -2,8 +2,11 @@ main_loop = True
 loop = True
 properties = []
 
+
+
 print "Type in the keys you want in your JSON object. Type STOP to move on."
 
+object_name = raw_input("Name of object: ")
 while loop:
     element = raw_input("Key Name: ")
     if element == "stop":
@@ -13,8 +16,8 @@ while loop:
         #print properties
 print "\n"
 generate = raw_input("How many entries would you like? ")
-
-jsonData = "{\n\t\"data\":[\n\t\t{\n"
+data = object_name
+jsonData = "{\n\t\""+data+"\":[\n\t\t{\n"
 id_num = 0
 for i in range(int(generate)):
     id_num += 1

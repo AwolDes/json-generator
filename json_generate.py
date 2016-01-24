@@ -34,3 +34,7 @@ jsonData += "\n\t\t}\n\t]\n}"
 
 print jsonData
 
+data = open("data.txt", 'w')
+data.write(jsonData)
+data.close()
+

@@ -31,13 +31,13 @@ for i in range(int(generate)):
         else:
             jsonData += "\t\t\t\""+i+"\":\"\"\n"
     if id_num != int(generate):
-        jsonData += "\n\t\t}\n\n\t\t{\n"
+        jsonData += "\n\t\t},\n\n\t\t{\n"
 
 jsonData += "\n\t\t}\n\t]\n}"
 
 print jsonData
 
-data = open("data.txt", 'w')
+data = open("data.json", 'w')
 data.write(jsonData)
 data.close()
 

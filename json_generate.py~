@@ -4,12 +4,12 @@ properties = []
 
 
 
-print "Type in the keys you want in your JSON object. Type !stop to move on."
+print "Type in the keys you want in your JSON object. Type STOP to move on."
 
 object_name = raw_input("Name of object: ")
 while loop:
     element = raw_input("Key Name: ")
-    if element == "!stop":
+    if element == "stop":
         loop = False
     else:
         properties.append(element)

@@ -6,13 +6,13 @@ import click
 @click.option('--key', '-k', multiple=True, default='', help="The keys for the element")
 @click.option('--repeat', '-r', default=1, help = "The amount of elemtns within the JSON object")
 
-def cli(obj, element, keys, repeat):
+def cli(obj, element, key, repeat):
     """This script generates blank JSON models"""
-    print obj, element, keys, repeat
+    print obj, element, key, repeat
 
     properties = []
-    print keys
-    for i in keys:
+    print key
+    for i in key:
         properties.append(i)
     data = obj
     jsonData = "{\n\t\""+data+"\":[\n\t\t{\n"

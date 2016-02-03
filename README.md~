@@ -10,3 +10,9 @@ To use this tool, simply clone the repository and then run `pip install .` in th
 * `--obj` or `-o` names the JSON object
 * `--element` or `-e` names the objects elements
 * `--key` or `-k` names the keys inside of the element 
+* `--repeat` or `-r` the amount of elements repeated
+
+### Example Command
+
+`-o people -e person -k name -k surname -k number -r 3` will give [this output](https://gist.github.com/AwolDes/7a95d06623d4cbe6d5fc)
+

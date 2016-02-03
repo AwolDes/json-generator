@@ -14,5 +14,5 @@ To use this tool, simply clone the repository and then run `pip install .` in th
 
 ### Example Command
 
-`-o people -e person -k name -k surname -k number -r 3` will give [this output](https://gist.github.com/AwolDes/7a95d06623d4cbe6d5fc)
+`jg -o people -e person -k name -k surname -k number -r 3` will give [this output](https://gist.github.com/AwolDes/7a95d06623d4cbe6d5fc)
 

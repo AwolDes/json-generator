@@ -11,7 +11,6 @@ To use this tool, simply clone the repository and then run `pip install .` in th
 * `--element` or `-e` names the objects elements
 * `--key` or `-k` names the keys inside of the element 
 * `--repeat` or `-r` the amount of elements repeated
-* `--id` or `-id` specifices whether or not IDs are keys, this is set True by default
 
 ### Example Command
 

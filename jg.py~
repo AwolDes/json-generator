@@ -5,9 +5,8 @@ import click
 @click.option('--element', '-e', default='', help="The element name")
 @click.option('--key', '-k', multiple=True, default='', help="The keys for the element")
 @click.option('--repeat', '-r', default=1, help = "The amount of elemtns within the JSON object")
-@click.option('--id', '-id', default=True, help="Set whether or not you want and ID key")
 
-def cli(obj, element, key, repeat, id):
+def cli(obj, element, key, repeat):
     """This script generates blank JSON models"""
     print obj, element, key, repeat
 
@@ -18,13 +17,10 @@ def cli(obj, element, key, repeat, id):
     data = obj
     jsonData = "{\n\t\""+data+"\":[\n\t\t{\n"
     id_num = 0
-    repeats = 0
 
     for i in range(repeat):
-	repeats+=1
-	if id == True:
-	    id_num += 1
-	    jsonData += "\t\t\t\"id\": " + str(id_num) + ",\n"
+        id_num += 1
+        jsonData += "\t\t\t\"id\": " + str(id_num) + ",\n"
 
         element_num = 0
         for i in properties:
@@ -33,7 +29,7 @@ def cli(obj, element, key, repeat, id):
                 jsonData += "\t\t\t\""+i+"\":\"\",\n"
             else:
                 jsonData += "\t\t\t\""+i+"\":\"\"\n"
-        if repeats != repeat:
+        if id_num != repeat:
             jsonData += "\n\t\t},\n\n\t\t{\n"
 
     jsonData += "\n\t\t}\n\t]\n}"

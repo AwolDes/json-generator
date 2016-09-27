@@ -1,5 +1,5 @@
 # JSON Generator
-A simple python script that generates a json model template
+A simple python script that generates a json model template. Does not generate dummy data
 
 # Usage
 
